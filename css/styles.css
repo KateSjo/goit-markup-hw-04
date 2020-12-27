@@ -427,20 +427,14 @@ body {
   margin-right: 10px;
   width: 16px;
   height: 12px;
-  /*fill: currentColor;*/
 }
 
 .svg-tel {
   margin-right: 10px;
   width: 10px;
   height: 16px;
-  /*fill: currentColor;*/
 }
 
-.svg-mail:focus,
-.svg-tel:focus {
-  fill: var(--accent-color);
-}
 
 /* Cписок кнопок*/
 
