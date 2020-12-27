@@ -95,7 +95,6 @@ body {
 .work {
   display: flex;
   flex-wrap: wrap;
-  padding-inline-start: 0;
 
   /*font-size: 14px;*/
 
@@ -162,6 +161,7 @@ body {
 }
 .work-description {
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.71;
 
   color: var(--secondary-text-color);
@@ -189,7 +189,6 @@ body {
   flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
-  padding-inline-start: 0;
 }
 
 .section-photo {
@@ -200,7 +199,7 @@ body {
 
 .section-comanda {
   padding-bottom: 94px;
-  color: var(--section-comanda-background);
+  background-color: var(--section-comanda-background);
 }
 
 .comanda {
@@ -209,7 +208,7 @@ body {
   flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
-  padding-inline-start: 0;
+  padding: 0;
 }
 
 .section-photos {
@@ -219,6 +218,9 @@ body {
   border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
   margin-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-white-color);
 }
 
 .comanda .section-photos {
@@ -235,7 +237,7 @@ body {
 
 .name-job {
   padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .section-photos .name,
@@ -246,6 +248,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .name {
   font-weight: 500;
 
@@ -260,11 +263,11 @@ body {
 }
 
 .icon-comanda {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   margin: 0;
-  padding-bottom: 30px;
   list-style: none;
 }
 
@@ -287,7 +290,6 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin: 0;
 }
 
 .comanda-item {
@@ -342,7 +344,6 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
-  padding-inline-start: 0;
 
   font-family: Raleway;
   font-weight: 700;
@@ -367,7 +368,6 @@ body {
 }
 
 .site-nav {
-  padding-inline-start: 0;
   display: flex;
   margin-right: 0;
   margin-left: 0;
@@ -385,7 +385,6 @@ body {
 }
 
 .site-auth {
-  padding-inline-start: 0;
   display: flex;
   margin-right: 0;
   margin-left: 0;
@@ -432,13 +431,6 @@ body {
   margin-right: 10px;
   width: 10px;
   height: 16px;
-}
-
-.svg-mail:focus,
-.svg-mail:hover,
-.svg-tel:focus,
-.svg-tel:hover {
-  fill: var(--accent-color);
 }
 
 /* Cписок кнопок*/
@@ -512,10 +504,16 @@ body {
 /* Картинки с описанием*/
 
 .description.list {
-  padding-inline-start: 0;
   display: block;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+}
+
+.description.list .section-photo:focus,
+.description.list .section-photo:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .section-photo {
@@ -543,7 +541,6 @@ body {
 }
 
 .photo-post {
-  padding-inline-start: 0;
   padding-bottom: 4px;
 
   font-weight: 700;
@@ -556,8 +553,6 @@ body {
 }
 
 .division {
-  padding-inline-start: 0;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
@@ -646,7 +641,7 @@ footer {
 }
 
 .footer-address {
-  padding-inline-start: 0;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
@@ -682,14 +677,56 @@ p {
   font-weight: 700;
   color: var(--primary-white-color);
   margin-bottom: 20px;
-}
-
-.join-icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--primary-white-color);
+  text-transform: uppercase;
 }
 
 .container-fotter {
   display: flex;
+  align-items: baseline;
+}
+
+.join-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.join-icon .comanda-item {
+  width: calc((100% - 30px) / 4);
+}
+
+.join-icon .comanda-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.join-icon .comanda-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.join-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.comanda-item > .join-link {
+  color: #afb1b8;
+}
+
+.comanda-icon .letter:hover {
+  fill: var(--primary-white-color);
+}
+.comanda-item > .join-link:focus,
+.comanda-item > .join-link:hover {
+  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
