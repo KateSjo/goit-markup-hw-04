@@ -198,6 +198,7 @@ body {
 /* Раздел - Наша команда */
 
 .section-comanda {
+  padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--section-comanda-background);
 }
@@ -404,6 +405,7 @@ body {
 }
 
 .list {
+  padding: 0;
   margin: 0;
   font-weight: 500;
   font-size: 14px;
@@ -514,6 +516,7 @@ body {
 .section-photo {
   width: calc((100% - 60px) / 3);
   border-radius: 0px 0px 4px 4px;
+  border: 1px solid #eeeeee;
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -534,7 +537,7 @@ body {
 }
 
 .photo-post {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 
   font-weight: 700;
   font-size: 18px;
@@ -631,10 +634,14 @@ footer {
 .address {
   margin-top: 20px;
   margin-bottom: 9px;
-  margin-right: 70px;
+  /*margin-right: 70px;*/
 
   font-style: normal;
   color: var(--primary-white-color);
+}
+
+.logo-address {
+  margin-right: 70px;
 }
 
 .footer-address {
