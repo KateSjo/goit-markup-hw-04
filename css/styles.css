@@ -38,9 +38,35 @@ body {
   background: var(--secondary-background-color);
 }
 
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-picture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero .container {
+  height: 600px;
+  padding: 200px 0;
+  margin: 0 auto;
+  width: 696px;
+}
+
 .hero-title {
-  padding-top: 200px;
-  margin-bottom: 44px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -67,22 +93,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 
   cursor: pointer;
-}
-
-.overlay {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/background-picture.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 /*Раздел - Виимание к деталям*/
@@ -236,8 +246,7 @@ body {
 }
 
 .name-job {
-  padding-top: 30px;
-  margin-bottom: 16px;
+  padding: 30px 32px;
 }
 
 .section-photos .name,
@@ -269,8 +278,6 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
-  padding-right: 32px;
-  padding-left: 32px;
 }
 
 .icon-comanda .comanda-item {
@@ -333,6 +340,7 @@ body {
 }
 
 .page-header .container {
+  padding: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -580,12 +588,14 @@ img {
   justify-content: center;
   align-items: center;
 
-  width: 170px;
-  height: 90px;
-
   border: 1px solid #afb1b8;
 
   border-radius: 4px;
+}
+
+.client-logo {
+  width: 170px;
+  height: 90px;
 }
 
 .clients-list .clients-icon {
@@ -722,7 +732,7 @@ p {
 }
 
 .comanda-item > .join-link {
-  color: #afb1b8;
+  color: var(--primary-white-color);
 }
 
 .comanda-icon .letter:hover {
