@@ -31,15 +31,13 @@ body {
 /*Hero*/
 
 .hero {
+  padding: 200px 0;
   letter-spacing: 0.06em;
 
   text-align: center;
   color: var(--primary-white-color);
   background: var(--secondary-background-color);
-}
 
-.overlay {
-  max-width: 1600px;
   height: 600px;
   background-image: linear-gradient(
       to right,
@@ -59,9 +57,7 @@ body {
 }
 
 .hero .container {
-  height: 600px;
-  padding: 200px 0;
-  margin: 0 auto;
+  padding: 0;
   width: 696px;
 }
 
@@ -98,7 +94,7 @@ body {
 /*Раздел - Виимание к деталям*/
 
 .work-section {
-  padding-top: 89px;
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -117,15 +113,10 @@ body {
 .work .work-item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
-  margin-bottom: 30px;
 }
 
 .work .work-item:nth-child(4n) {
   margin-right: 0;
-}
-
-.work .work-item:nth-last-child(-n + 4) {
-  margin-bottom: 0;
 }
 
 .icon-item {
@@ -634,8 +625,6 @@ footer {
 }
 
 .footer-portfolio {
-  display: block;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -708,15 +697,23 @@ p {
   list-style: none;
 }
 
-.join-icon .comanda-item {
+.join-icon .footer-item {
   width: calc((100% - 30px) / 4);
 }
 
-.join-icon .comanda-item:nth-child(4n) {
+.footer-item {
+  margin-right: 10px;
+}
+
+.footer.item {
+  display: block;
+}
+
+.join-icon .footer-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.join-icon .comanda-item:nth-last-child(-n + 4) {
+.join-icon .footer-item:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
 
@@ -731,15 +728,20 @@ p {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.comanda-item > .join-link {
+.footer-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-item > .join-link {
   color: var(--primary-white-color);
 }
 
-.comanda-icon .letter:hover {
+.footer-icon .letter:hover {
   fill: var(--primary-white-color);
 }
-.comanda-item > .join-link:focus,
-.comanda-item > .join-link:hover {
+.footer-item > .join-link:focus,
+.footer-item > .join-link:hover {
   fill: var(--primary-white-color);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
